@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE programa SYSTEM "impresion.dtd">
+
+<programa>
+    <configuracion>
+        <archivo>Proyecto_Restaurante.pdf</archivo> <formato>Color</formato>                   <copias>2</copias>                         </configuracion>
+
+    <proceso>
+        <condicion sensor="papel" valor="SI">
+            <vista_previa/> <imprimir/>     </condicion>
+
+        <condicion sensor="papel" valor="NO">
+            <cancelar/>          <mostrar_mensaje>Cancelado</mostrar_mensaje> </condicion>
+    </proceso>
+    </programa>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="URF-8"?>
+<!DOCTYPE direccion SYSTEM "xml-00.dtd">
+<direccion>
+    <nombreCompleto>
+        <nombre>Citlaly</nombre>
+        <apellidos>Morales Viveros</apellidos>
+    </nombreCompleto>
+
+    <correo>citlipop@gmail.com</correo>
+    <telefono>2282782080</telefono>
+
+    <cumple>
+        <dia>15</dia>
+        <mes>10</mes>
+        <anio>2006</anio>
+    </cumple>
+</direccion>
