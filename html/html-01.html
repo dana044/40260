@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico SVG</title>
+</head>
+<body>
+    <!-- a travez de un svg añadido directamente en un html -->
+    <!-- se mueve de un lado a otro segun las repeatCount -->
+    <h1>Gráfico SVG</h1>
+    <svg width="300" height="100">
+        <circle r="40" cx="50" cy="50" fill="gold" stroke="yellow" stroke-width="4">
+            <animate
+                attributeName="cx"
+                begin="-0s"
+                dur="2.5s"
+                from="0"
+                to="200%"
+                repeatCount="5" />
+        </circle>   
+    </svg>
+    
+    <p/>
+
+    <!--Se mueve en circulo dependiendo del tamaño de area de dibujo (svg)-->
+    <svg width="300" height="300">
+        <circle r="40" cx="80" cy="80" fill="green" stroke="lightgreen" stroke-width="4">
+            <animateTransform
+                attributeName="transform"
+                begin="0s"
+                dur="2.5s"
+                type="rotate"
+                from="0 185 185"
+                to="360 85 85"
+                repeatCount="5" />
+        </circle>
+    </svg>
+
+
+    <h2>Ejmeplo com img</h2>
+    <img src="circulo.svg" alt="">
+    
+    <h2>Menú hamburguesa</h2>
+    <img src="icono.svg" alt="Menú">
+    menú
+
+    <h2>Atómo</h2>
+    <img src="atomo.svg" alt="" width="90">
+</body>
+</html>
