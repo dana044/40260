@@ -1,13 +1,15 @@
 <!ELEMENT programa (configuracion, proceso)>
-
 <!ELEMENT configuracion (archivo, formato, copias)>
 <!ELEMENT archivo (#PCDATA)>
 <!ELEMENT formato (#PCDATA)>
 <!ELEMENT copias (#PCDATA)>
 
 <!ELEMENT proceso (accion+)>
-
 <!ELEMENT accion (vista_previa | imprimir | cancelar | mostrar_mensaje | condicion)>
 
-<!ELEMENT vista_previa EMPTY> <!ELEMENT imprimir EMPTY>     <!ELEMENT cancelar EMPTY>     <!ELEMENT mostrar_mensaje (#PCDATA)> <!ELEMENT condicion (accion+)>
-<!ATTLIST condicion sensor CDATA #REQUIRED valor CDATA #REQUIRED>
+<!ELEMENT vista_previa EMPTY> 
+<!ELEMENT imprimir EMPTY>      
+<!ELEMENT cancelar EMPTY>      
+<!ELEMENT mostrar_mensaje (#PCDATA)> 
+<!ELEMENT condicion (accion+)>
+<!ATTLIST condicion sensor CDATA #REQUIRED valor CDATA #REQUIRED>]>
