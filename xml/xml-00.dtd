@@ -5,7 +5,7 @@
 <!ELEMENT apellidos (#PCDATA)>
 <!ELEMENT correo (#PCDATA)>
 <!ELEMENT telefono (#PCDATA)>
-<!ELEMENT cumple(dia, mes anio)>
+<!ELEMENT cumple (dia, mes, anio)>
 <!ELEMENT dia (#PCDATA)>
 <!ELEMENT mes (#PCDATA)>
 <!ELEMENT anio (#PCDATA)>
