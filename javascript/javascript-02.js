@@ -1,5 +1,11 @@
 let resultado = document.getElementById("resultado")
 let botones = document.getElementsByTagName("button")
+
+let prm1 = ""
+let prm2 = ""
+let operacion = ""
+
+// 1. Asignar eventos a los números
 for (const key in botones) {
     if (Object.prototype.hasOwnProperty.call(botones, key)) {
         const boton = botones[key];
@@ -7,37 +13,67 @@ for (const key in botones) {
             boton.addEventListener("click", pintar)
         else
             boton.addEventListener("click", pintar2)
-        // console.log(boton)
     }
 }
 
 function pintar(e){
-    console.log(e.target.innerText)
     resultado.value += e.target.innerText
 }
 
-let operadores = document.getElementsByClassName("operadores")
-for (const key in operadores) {
-    if (Object.prototype.hasOwnProperty.call(operadores, key)) {
-        const operador = operadores[key];
-        operador.addEventListener("click", pintar2)
-        // console.log(operador)
-    }   
-}   
-
 function pintar2(e){
-    console.log(e.target.innerText)
-    if (e.target.innerText == "+" )
-        suma()
+    let texto = e.target.innerText
+    
+    if (texto == "+") suma()
+    else if (texto == "-") resta()
+    else if (texto == "*") multiplicacion()
+    else if (texto == "/") division()
+    else if (texto == "Ce") ce()
+    else if (texto == "=") igual()
 }
 
-let prm1
+
 function suma(){
     prm1 = resultado.value
+    operacion = "+"
     resultado.value = ""
 }
 
+function resta(){
+    prm1 = resultado.value
+    operacion = "-"
+    resultado.value = ""
+}
+
+function multiplicacion(){
+    prm1 = resultado.value
+    operacion = "*"
+    resultado.value = ""
+}
+
+function division(){
+    prm1 = resultado.value
+    operacion = "/"
+    resultado.value = ""
+}
+
+function ce(){
+    resultado.value = ""
+    prm1 = ""
+    prm2 = ""
+    operacion = ""
+}
+
+
 function igual(){
     prm2 = resultado.value
-    resultado.value = parseInt(prm1) + parseInt(prm2)
+    let n1 = parseInt(prm1)
+    let n2 = parseInt(prm2)
+    let total = 0
+
+    if (operacion == "+") total = n1 + n2
+    if (operacion == "-") total = n1 - n2
+    if (operacion == "*") total = n1 * n2
+    if (operacion == "/") total = n1 / n2
+
+    resultado.value = total
 }
